@@ -9,6 +9,7 @@ CREATE TABLE dashboard_setup (
     category_type category_type_opt NOT NULL,
     options TEXT[],
     value TEXT NOT NULL,
+    core BOOLEAN DEFAULT FALSE,
     created_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     created_by VARCHAR(100) DEFAULT 'SYSTEM',
     modified_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP,

@@ -3,6 +3,7 @@ CREATE TABLE dashboard_setup_header (
     header_cd VARCHAR(50) NOT NULL UNIQUE,
     header_desc TEXT NOT NULL,
     is_active BOOLEAN DEFAULT TRUE,
+    core BOOLEAN DEFAULT FALSE,
     created_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     created_by VARCHAR(100) DEFAULT 'SYSTEM',
     modified_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
