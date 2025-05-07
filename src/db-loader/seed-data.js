@@ -7,11 +7,15 @@ import { logger } from 'common-node-lib';
 
 const log = logger('seed-data');
 
+const files = [
+  'user_role.csv',
+  'user_scope.csv',
+  'role_scope.csv'
+];
+
 const runSeeder = async (knex) => {
   const seedDir = path.resolve('src/init-data');
   try {
-    const files = fs.readdirSync(seedDir);
-
     for (const file of files) {
       const tableName = path.basename(file, '.csv');
       const filePath = path.join(seedDir, file);
