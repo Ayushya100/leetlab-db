@@ -23,7 +23,7 @@ const knexConfig = {
       directory: './src/migrations',
     },
     seeds: {
-      directory: './src/seeds',
+      directory: './src/db-loader',
     },
   },
 };
