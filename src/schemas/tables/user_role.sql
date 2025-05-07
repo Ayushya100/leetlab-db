@@ -4,6 +4,7 @@ CREATE TABLE user_role (
     role_desc TEXT NOT NULL,
     is_active BOOLEAN DEFAULT TRUE,
     is_default BOOLEAN DEFAULT FALSE,
+    core BOOLEAN DEFAULT FALSE,
     created_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     created_by VARCHAR(100) DEFAULT 'SYSTEM',
     modified_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
