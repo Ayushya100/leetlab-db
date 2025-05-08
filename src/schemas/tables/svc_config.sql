@@ -6,6 +6,7 @@ CREATE TABLE svc_config (
     environment VARCHAR(6) NOT NULL,
     protocol protocol_opt DEFAULT 'HTTP',
     port VARCHAR(6) NOT NULL,
+    core BOOLEAN DEFAULT FALSE,
     created_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     created_by VARCHAR(100) DEFAULT 'SYSTEM',
     modified_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
