@@ -10,7 +10,9 @@ const log = logger('seed-data');
 const files = [
   'user_role.csv',
   'user_scope.csv',
-  'role_scope.csv'
+  'role_scope.csv',
+  'dashboard_setup_header.csv',
+  'dashboard_setup.csv'
 ];
 
 const runSeeder = async (knex) => {
