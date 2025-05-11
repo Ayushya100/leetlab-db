@@ -3,7 +3,7 @@ CREATE TYPE difficulty_opt AS ENUM ('Easy', 'Medium', 'Hard');
 CREATE TABLE problems (
     id TEXT PRIMARY KEY DEFAULT UPPER(REPLACE(uuid_generate_v4()::TEXT, '-', '')),
     type_id TEXT NOT NULL,
-    problem_cd TEXT NOT NULL UNIQUE,
+    problem_cd INTEGER NOT NULL UNIQUE,
     problem_title TEXT NOT NULL,
     problem_desc TEXT NOT NULL,
     input_format TEXT,

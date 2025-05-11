@@ -25,7 +25,7 @@ const dbTables = [
   'problem_tags',
   'problem_test_cases',
   'user_submission',
-  'user_contributed_problems',
+  'user_problems',
   'code_execution_job',
   'execution_testcase_response',
   'playlist',
