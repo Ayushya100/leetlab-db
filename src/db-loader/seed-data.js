@@ -13,7 +13,8 @@ const files = [
   'role_scope.csv',
   'dashboard_setup_header.csv',
   'dashboard_setup.csv',
-  'problem_type.csv'
+  'problem_type.csv',
+  'support_language.csv'
 ];
 
 const runSeeder = async (knex) => {

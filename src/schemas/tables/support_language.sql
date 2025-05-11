@@ -4,6 +4,7 @@ CREATE TABLE support_language (
     lang_cd TEXT NOT NULL UNIQUE,
     language TEXT NOT NULL,
     metadata TEXT,
+    core BOOLEAN DEFAULT FALSE,
     created_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     created_by VARCHAR(100) DEFAULT 'SYSTEM',
     modified_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP,

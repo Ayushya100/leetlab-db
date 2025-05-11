@@ -103,8 +103,8 @@ BEFORE UPDATE ON user_submission
 FOR EACH ROW
 EXECUTE FUNCTION update_version();
 
-CREATE TRIGGER user_contributed_problems_update_trigger
-BEFORE UPDATE ON user_contributed_problems
+CREATE TRIGGER user_problems_update_trigger
+BEFORE UPDATE ON user_problems
 FOR EACH ROW
 EXECUTE FUNCTION update_version();
 

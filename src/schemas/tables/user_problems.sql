@@ -1,4 +1,4 @@
-CREATE TABLE user_contributed_problems (
+CREATE TABLE user_problems (
     id TEXT PRIMARY KEY DEFAULT UPPER(REPLACE(uuid_generate_v4()::TEXT, '-', '')),
     user_id TEXT NOT NULL,
     problem_id TEXT NOT NULL,
