@@ -14,7 +14,8 @@ const files = [
   'dashboard_setup_header.csv',
   'dashboard_setup.csv',
   'problem_type.csv',
-  'support_language.csv'
+  'support_language.csv',
+  'tags.csv',
 ];
 
 const runSeeder = async (knex) => {

@@ -1,10 +1,10 @@
-CREATE TABLE user_submission (
+CREATE TABLE problem_validation_runs (
     id TEXT PRIMARY KEY DEFAULT UPPER(REPLACE(uuid_generate_v4()::TEXT, '-', '')),
-    user_id TEXT NOT NULL,
     problem_id TEXT NOT NULL,
     language_id TEXT NOT NULL,
-    code TEXT NOT NULL,
+    source_code TEXT,
     status TEXT NOT NULL,
+    compile_output TEXT,
     runtime_msg TEXT,
     memory_msg TEXT,
     error_msg TEXT,
@@ -12,14 +12,14 @@ CREATE TABLE user_submission (
     max_time TEXT,
     avg_memory TEXT,
     avg_time TEXT,
-    submitted_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    run_by TEXT NOT NULL,
     created_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     created_by VARCHAR(100) DEFAULT 'SYSTEM',
     modified_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     modified_by VARCHAR(100) DEFAULT 'SYSTEM',
     version INT DEFAULT 1,
     is_deleted BOOLEAN DEFAULT FALSE,
-    FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE,
     FOREIGN KEY (problem_id) REFERENCES problems(id) ON DELETE CASCADE,
-    FOREIGN KEY (language_id) REFERENCES support_language(id)
+    FOREIGN KEY (language_id) REFERENCES support_language(id),
+    FOREIGN KEY (run_by) REFERENCES users(id) ON DELETE CASCADE
 );

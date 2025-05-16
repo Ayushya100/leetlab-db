@@ -32,6 +32,7 @@ const dbTables = [
   'playlist_items',
   'problem_snippet',
   'problem_solution',
+  'problem_validation_runs',
 ];
 
 const up = async (knex) => {
