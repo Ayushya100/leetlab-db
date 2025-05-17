@@ -1,4 +1,4 @@
-CREATE TABLE user_submission (
+CREATE TABLE user_submission_dtl (
     id TEXT PRIMARY KEY DEFAULT UPPER(REPLACE(uuid_generate_v4()::TEXT, '-', '')),
     user_id TEXT NOT NULL,
     problem_id TEXT NOT NULL,
@@ -12,6 +12,8 @@ CREATE TABLE user_submission (
     max_time TEXT,
     avg_memory TEXT,
     avg_time TEXT,
+    start_time TIMESTAMP,
+    end_time TIMESTAMP,
     submitted_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     created_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     created_by VARCHAR(100) DEFAULT 'SYSTEM',

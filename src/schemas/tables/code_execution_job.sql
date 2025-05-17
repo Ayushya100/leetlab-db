@@ -16,5 +16,5 @@ CREATE TABLE code_execution_job (
     is_deleted BOOLEAN DEFAULT FALSE,
     FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE,
     FOREIGN KEY (problem_id) REFERENCES problems(id) ON DELETE CASCADE,
-    FOREIGN KEY (submission_id) REFERENCES user_submission(id) ON DELETE CASCADE
+    FOREIGN KEY (submission_id) REFERENCES user_submission_dtl(id) ON DELETE CASCADE
 );

@@ -98,8 +98,13 @@ BEFORE UPDATE ON problem_test_cases
 FOR EACH ROW
 EXECUTE FUNCTION update_version();
 
-CREATE TRIGGER user_submission_update_trigger
-BEFORE UPDATE ON user_submission
+CREATE TRIGGER user_submission_hdr_update_trigger
+BEFORE UPDATE ON user_submission_hdr
+FOR EACH ROW
+EXECUTE FUNCTION update_version();
+
+CREATE TRIGGER user_submission_dtl_update_trigger
+BEFORE UPDATE ON user_submission_dtl
 FOR EACH ROW
 EXECUTE FUNCTION update_version();
 
