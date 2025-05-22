@@ -11,5 +11,7 @@ CREATE TABLE user_submission_hdr (
     modified_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     modified_by VARCHAR(100) DEFAULT 'SYSTEM',
     version INT DEFAULT 1,
-    is_deleted BOOLEAN DEFAULT FALSE
+    is_deleted BOOLEAN DEFAULT FALSE,
+    FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE,
+    FOREIGN KEY (problem_id) REFERENCES problems(id) ON DELETE CASCADE
 );
